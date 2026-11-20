@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Kokurikulum SKSG</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #26364a;
+}
+header {
+  background: #17365d;
+  color: white;
+  padding: 22px 28px;
+}
+header h2 { margin: 0 0 6px; }
+header p { margin: 0; color: #d9e5f5; font-size: 13px; }
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+}
+.welcome {
+  margin-bottom: 22px;
+}
+.welcome h2 { margin-bottom: 5px; }
+.welcome p { color: #718096; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px #0000000a;
+}
+.card h3 {
+  font-size: 27px;
+  margin: 8px 0;
+  color: #17365d;
+}
+.card p { color: #718096; margin: 0; font-size: 13px; }
+.section {
+  background: white;
+  margin-top: 24px;
+  padding: 22px;
+  border-radius: 12px;
+}
+.section h3 { margin-top: 0; }
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.menu button {
+  background: #eef4fb;
+  border: 1px solid #dce7f3;
+  padding: 18px 10px;
+  border-radius: 9px;
+  color: #17365d;
+  font-weight: bold;
+  cursor: pointer;
+}
+.menu button:hover {
+  background: #dceafa;
+}
+.notice {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff7df;
+  border-radius: 9px;
+  color: #805d13;
+  font-size: 13px;
+}
+footer {
+  text-align: center;
+  color: #8492a6;
+  padding: 25px;
+  font-size: 12px;
+}
+@media(max-width:700px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .menu { grid-template-columns: repeat(2, 1fr); }
+  .container { padding: 15px; }
+  header { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>🎓 E-KOKURIKULUM SKSG</h2>
+  <p>Sekolah Kebangsaan Sungai Gau | Tahun 2026</p>
+</header>
+
+<main class="container">
+  <div class="welcome">
+    <h2>Dashboard Utama</h2>
+    <p>Selamat datang ke Sistem Rekod Aktiviti Kokurikulum SKSG.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <p>Kategori Kokurikulum</p>
+      <h3>4</h3>
+      <p>Unit pengurusan</p>
+    </div>
+    <div class="card">
+      <p>Jumlah Rekod Aktiviti</p>
+      <h3 id="totalRekod">0</h3>
+      <p>Rekod keseluruhan</p>
+    </div>
+    <div class="card">
+      <p>Jumlah Kehadiran</p>
+      <h3>0</h3>
+      <p>Kehadiran murid</p>
+    </div>
+    <div class="card">
+      <p>Laporan</p>
+      <h3>0</h3>
+      <p>Laporan dijana</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <h3>Menu Pengurusan</h3>
+    <div class="menu">
+      <button onclick="pilihMenu('Rekod Aktiviti')">📝<br>Rekod Aktiviti</button>
+      <button onclick="pilihMenu('Unit Beruniform')">🛡️<br>Unit Beruniform</button>
+      <button onclick="pilihMenu('Kelab dan Persatuan')">📚<br>Kelab Persatuan</button>
+      <button onclick="pilihMenu('Sukan dan Permainan')">⚽<br>Sukan Permainan</button>
+      <button onclick="pilihMenu('Rumah Sukan')">🏆<br>Rumah Sukan</button>
+      <button onclick="pilihMenu('Kehadiran Murid')">👥<br>Kehadiran</button>
+      <button onclick="pilihMenu('Laporan')">📊<br>Laporan</button>
+      <button onclick="pilihMenu('Pengurusan Data')">⚙️<br>Pengurusan Data</button>
+    </div>
+
+    <div class="notice" id="status">
+      Sistem E-Kokurikulum SKSG 2026 sedia untuk dibangunkan.
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 SK Sungai Gau | E-Kokurikulum SKSG
+  <br>Berilmu • Beramal • Bertakwa
+</footer>
+
+<script>
+function pilihMenu(nama) {
+  document.getElementById("status").textContent =
+    "Modul " + nama + " akan dibangunkan dalam langkah seterusnya.";
+}
+</script>
+
+</body>
+</html>
